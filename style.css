@@ -39,9 +39,9 @@
 
 
 :root {
-  --primary-color: #4D9DE7;
+  --primary-color: #0672CB;
   --white: #ffffff;
-  --black: #000000;
+  --black: #0E0E0E;
 }
 
 body {
@@ -237,13 +237,14 @@ input[type="password"]{
 	flex-flow: row wrap;
 	justify-content: center;
 	margin-top: 30px;
+	position: relative;
+	z-index: 123;
 }
 .frame ul li {
 	list-style: none;
 	float: left;
 	text-align: center;
 	width: 112px;
-	
 }
 .frame ul li span {
 	display: block;
@@ -267,11 +268,14 @@ input[type="password"]{
 	position: relative;
 	transition: all 0.5s ease-in-out;
 }
-.frame ul li a:hover {
+.frame ul li a span {
+	color: red;
+}
+.frame ul li:hover a {
 	background: var(--primary-color);
 }
-.frame ul li a:hover span {
-	color: var(--primary-color);
+.frame ul li:hover span {
+	color: var(--primary-color);  
 }
 .frame ul li.active a,
 .frame ul li.completed a {
@@ -314,7 +318,8 @@ input[type="password"]{
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	margin-top: 60px; 
+
 }
 .title {
     text-align: center;
@@ -331,10 +336,17 @@ input[type="password"]{
 .verification-code ul li a {
 	color: #0E0E0E;
 }
-form.verification-form {
+
+.verification-form-inner {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    }
+.code-title {
+	max-width: 445px;
+	margin: 30px auto 0;
 }
 form.verification-form input {
 	border: 1px solid #0E0E0E;
@@ -352,3 +364,90 @@ form.verification-form .form-group:last-child {
 form.verification-form input::placeholer {
 	color: #0E0E0E!important;
 }
+.bottom-title h3 {
+	padding-bottom: 10px;
+}
+form.verification-form input[type="submit"] {
+    width: 100%;
+    border-color: var(--primary-color);
+}
+.skip {
+	text-align: center;
+}
+.skip a {
+	color: var(--primary-color);
+}
+.verification-code {
+	width: 800px;
+	margin: 0 auto;
+}
+.verification-form-inner {
+	margin-bottom: 60px;
+}
+
+/**=== office registration page css ==**/
+.registration-bottom {
+    padding: 0 50px;
+}
+.bottom-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.bottom-item {
+	margin-right: 30px;
+	width: calc((100% - 30px) /2);
+}
+.bottom-item:last-child {
+	margin-right: 0;
+}
+.right-item {
+	display: flex;
+	flex-flow: row wrap;
+}
+.color {
+	margin-right: 30px;
+	width: calc((100% - 30px) /2);
+	margin-bottom: 15px;
+}
+.color:nth-child(2) {
+	margin-right: 0;
+}
+.color span {
+	border: 1px solid #0E0E0E;
+	border-radius: 4px;
+	height: 42px;
+	width: 100%;
+	display: inline-block;
+	line-height: 42px;
+	text-align: center;
+	position: relative;
+}
+.color span::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 42px;
+	background: var(--primary-color);
+	width: 40px;
+}
+.color.secondary-color span::before {
+	background: #0E0E0E;
+}
+.color p {
+	padding-bottom: 5px;
+}
+input[type="file"] {
+	height: 200px;
+	width: 100%;
+	background: rgba(6,114,204,0.2);
+	border: 1px dashed #0E0E0E;
+	line-height: 200px;
+	padding: 0 30px;
+}
+.buttons {
+	margin-top: 30px;
+}
+

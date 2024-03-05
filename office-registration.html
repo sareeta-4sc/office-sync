@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Office Registration</title>
+</head>
+<body>
+<section id="sign_up" class="registration">
+	<div class="signup-wrap">
+		<div class="item item-left">
+			<div class="banner-text">
+				<h1><span>Welcome Back!</span><br>Ready to get Started</h1>
+			</div>
+		</div>
+		<div  class="item item-right">
+			<div class="logo">
+				<img  src="images/Logo (1).svg" alt="main logo">
+			</div>
+			<div class="frame">
+				<ul>
+					<li class="completed"><a  href="#">1</a><span>Company Details</span></li>
+					<li class="active"><a href="#">2</a><span>Company Setup</span></li>
+					<li><a href="#">3</a><span>Verification</span></li>
+				</ul>
+			</div>
+			<div class="registration-bottom">
+				<div class="form-title title-center">
+					<h2>Company Setup</h2>
+				</div>
+				<div class="bottom-wrap">
+					<div class="bottom-item">
+						<form id="upload_form" enctype="multipart/form-data" method="post">
+							<div class="form-group">
+								<label>Organization Logo</label>
+						  		<input type="file" name="file1" id="file1" onchange="uploadFile()">
+						  	</div>
+					  		<div class="form-group">
+									<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+									<h3 id="status"></h3>
+									<p id="loaded_n_total"></p>
+								</div>
+						</form>
+					</div>
+					<div class="bottom-item right-item">
+						<div class="color">
+							<p>Primary Colour</p>
+							<span>#832942</span>
+						</div>
+						<div class="color secondary-color">
+							<p>Secondary Colour</p>
+							<span>#0E0E0E</span>
+						</div>
+						<div class="color tertiary-color">
+							<p>Tertiary Colour</p>
+							<span>#832942</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="buttons">
+					<form>
+						<div class="group-half">
+							<div class="form-group button-border">
+								<input type="submit" name="submit" value="Go Back">
+							</div>
+							<div class="form-group">
+								<input type="submit" name="submit" value="Continue">
+							</div>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+<script src="js/init.js"></script>
+
+
+</body>
+</html>
