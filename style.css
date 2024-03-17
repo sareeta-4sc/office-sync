@@ -104,7 +104,7 @@ ul li {
 }
 .item-right {
 	width: 60%;
-	background: #F2F2F2CC;
+	background: #ffffff;
 	position: relative;
 }
 .banner-image img {
@@ -115,17 +115,17 @@ ul li {
 }
 .logo {
     text-align: center;
-    padding-top: 60px;
+    margin: 80px 0 30px;
 }
 .banner-text {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: flex-end;
-	height: 100vh;
+	height: 100%;
 }
 .banner-text h1 {
-	padding-bottom: 200px;
+	padding-bottom: 160px;
 	color: var(--white);
 	max-width: 270px;
 	margin: 0 auto;
@@ -138,13 +138,9 @@ ul li {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    width: 70%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
-    position: absolute;	
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 form {
 	width: 100%;
@@ -164,8 +160,9 @@ label {
 }
 input,
 textarea {
+	color: #636363;
 	border: 1px solid #E1E1E1;
-	background-color: #F5F6F7;
+	background-color: #f5f6f7;
 	width: 100%;
 	height: 50px;
 	padding: 0 10px;
@@ -178,6 +175,7 @@ textarea {
 	height: 100px;
 	padding: 10px;
 	color: #636363;
+	background: #f5f6f7;
 }
 .forgot {
 	text-align: right;
@@ -210,11 +208,26 @@ input[type="submit"]:hover {
 input:focus-visible {
     outline: none;
 }
-input[type="password"]{
+.input-group-text {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.input-group-text::before{
+	content: "";
 	background-image: url('images/eye.png');
 	background-position: center  right 10px;
 	background-repeat: no-repeat;
-	background-size: 20px;	
+	background-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /**== sign up page css ===**/
@@ -378,7 +391,8 @@ form.verification-form input[type="submit"] {
 	color: var(--primary-color);
 }
 .verification-code {
-	width: 800px;
+	width: 90%;
+	max-width: 800px;
 	margin: 0 auto;
 }
 .verification-form-inner {
@@ -393,7 +407,7 @@ form.verification-form input[type="submit"] {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 .bottom-item {
 	margin-right: 30px;
@@ -419,19 +433,17 @@ form.verification-form input[type="submit"] {
 	border-radius: 4px;
 	height: 42px;
 	width: 100%;
-	display: inline-block;
 	line-height: 42px;
-	text-align: center;
-	position: relative;
+	display: flex;
+	align-items: center;
 }
 .color span::before {
 	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
+	display: inline-block;
 	height: 42px;
 	background: var(--primary-color);
 	width: 40px;
+	margin-right: 8px;
 }
 .color.secondary-color span::before {
 	background: #0E0E0E;
@@ -439,15 +451,301 @@ form.verification-form input[type="submit"] {
 .color p {
 	padding-bottom: 5px;
 }
-input[type="file"] {
-	height: 200px;
-	width: 100%;
-	background: rgba(6,114,204,0.2);
-	border: 1px dashed #0E0E0E;
-	line-height: 200px;
-	padding: 0 30px;
-}
+
 .buttons {
 	margin-top: 30px;
 }
+.button-middle {
+    max-width: 540px;
+    margin: 30px auto 0;
+}
+ 
+ .company-detail .form-title {
+    margin-top: 5px;
+}
+.input-group {
+	position: relative;
+}
+.input-group input {
+	padding-right: 50px;
+}
+.input-group-append.toggle-password {
+    display: flex;
+    width: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+}
+span.input-group-text.mdi::after {
+    content: "";
+    width: 1px;
+    height: 22px;
+    background: #000;
+    position: absolute;
+    left: 55%;
+    top: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+}
+span.input-group-text.mdi.mdi-eye-off-outline::after {
+    left: 20px;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.inner-wrap {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 114px);
+}
 
+
+.drag-file-area {
+	width: 100%;
+	background: rgba(6,114,204,0.2);
+	border-radius: 5px;
+	border: 1px dashed #0E0E0E;
+	padding: 60px 30px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.drag-file-area .upload-icon {
+    font-size: 24px;
+    border: 2px solid #0E0E0E;
+    border-radius: 50%;
+    padding: 8px;
+    color: #0E0E0E;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.drag-file-area h3 {
+	font-size: 26px;
+	margin: 15px 0;
+}
+.drag-file-area label {
+	font-size: 16px;
+}
+.drag-file-area label .browse-files-text {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+.browse-files span {
+	position: relative;
+	top: -25px;
+}
+.default-file-input {
+	opacity: 0;
+	height: 30px;
+}
+.cannot-upload-message {
+	background-color: #ffc6c4;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+	padding: 5px 10px 5px 30px;
+	border-radius: 5px;
+	color: #BB0000;
+	display: none;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.cannot-upload-message span, .upload-button-icon {
+	padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+	padding-left: 20px;
+	cursor: pointer;
+}
+.file-block {
+    color: #f7fff7;
+    border: 1px solid #636363;
+    background-color: #F5F6F7;
+    transition: all 1s;
+    position: relative;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px;
+    padding: 14px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-flow: row wrap;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+	color: #0E0E0E;
+}
+.progress-bar {
+    position: static;
+    background: #0672CB;
+    width: 100% !important;
+    height: 8px;
+    border-radius: 50px;
+    margin-top: 7px;
+}
+
+.file-info {
+    font-size: 12px;
+}
+
+span.file-size {
+    margin-left: auto;
+}
+
+.file-info {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    color: #0E0E0E;
+}
+.upload-button {
+	font-family: 'Montserrat';
+	background-color: #7b2cbf;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
+.browse-files span.successful-message {
+    top: 0;
+    color: var(--primary-color);
+    margin-top: 10px;
+    display: block;
+}
+span.material-icons.remove-file-icon {
+    width: 20px;
+}
+
+span.file-name {
+    font-weight: 600;
+}
+
+.bar-left {
+    display: flex;
+    width: 100%;
+}
+/** Responsive code Here **/
+@media only screen and (max-width: 1180px) {
+	.logo {
+		margin-top: 30px
+	}
+	.color {
+		width: 100%;
+		margin-right: 0;
+	}
+	.banner-text h1 {
+		font-size: 42px;
+		line-height: 46px;
+		padding-bottom: 100px;
+	}
+}
+@media only screen and (max-width: 767.3px) {
+	.logo {
+		margin-bottom: 30px;
+	}
+	.logo img {
+		width: 60%;
+		max-width: 180px;
+	} 
+	.signin-wrap {
+	    height: auto;
+	}
+	.item-left,.item-right,
+	.signin-form {
+	    width: 100%;
+	}
+	.item-right {
+		width: 100%;
+		padding: 0 30px;
+		margin: 0 auto;
+	}
+	.banner-text h1 {
+	    text-align: center;
+	    padding: 0;
+	    font-size: 34px;
+	    line-height: 42px;
+	}
+	h2 {
+		font-size: 26px;
+		line-height: 30px
+	}
+	.item.item-left {
+	    padding: 100px 30px;
+	}
+	.signin-form.company-detail {
+		margin-top: 30px;
+	}
+	.frame ul li {
+	    width: 104px;
+	}
+	.title-center {
+		margin-top: 30px;
+	}
+	.registration-bottom {
+		padding: 0 30px;
+	}
+	.inner-wrap {
+		height: auto;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.banner-text h1 {
+	    font-size: 26px;
+	    line-height: 32px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.form-title h2 {
+		margin-bottom: 5px
+	}
+	.group-half .form-group {
+	    width: 100%;
+	    margin-right: 0px;
+	}
+	.bottom-item {
+		width: 100%;
+	}
+	.item-right {
+		padding: 0 20px;
+	}
+	.frame ul li {
+		width: 90px;
+	}
+	.frame ul li span {
+		line-height: 12px;
+		margin-top: 5px;
+	}
+}

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 	<title>Office Registration</title>
 </head>
 <body>
@@ -35,13 +36,22 @@
 						<form id="upload_form" enctype="multipart/form-data" method="post">
 							<div class="form-group">
 								<label>Organization Logo</label>
-						  		<input type="file" name="file1" id="file1" onchange="uploadFile()">
-						  	</div>
-					  		<div class="form-group">
-									<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
-									<h3 id="status"></h3>
-									<p id="loaded_n_total"></p>
+						  		<div class="upload-files-container">
+								<div class="drag-file-area">
+									<span class="material-icons-outlined upload-icon"> file_upload </span>
+									<label class="label"><span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">Click to upload  </span> <span>or drag and drop</span> </span> </label>
 								</div>
+								<span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+								<div class="file-block">
+									<div class="file-info">
+										<div class="bar-left"><span class="file-name"> </span><span class="file-size">  </span> </div>
+										<div class="progress-bar"></div>
+									</div>
+									<span class="material-icons remove-file-icon">close_small</span>
+									
+								</div>
+							</div>
+						  	</div>
 						</form>
 					</div>
 					<div class="bottom-item right-item">
@@ -60,7 +70,7 @@
 					</div>
 				</div>
 
-				<div class="buttons">
+				<div class="buttons button-middle">
 					<form>
 						<div class="group-half">
 							<div class="form-group button-border">
@@ -72,13 +82,11 @@
 						</div>
 					</form>
 				</div>
-				
 			</div>
 		</div>
 	</div>
 </section>
-<script src="js/init.js"></script>
-
-
+<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>

@@ -19,45 +19,60 @@
 			<div class="logo">
 				<img  src="images/Logo (1).svg" alt="main logo">
 			</div>
-			<div class="signin-form">
-				<div class="form-title">
-					<h2>Sign up</h2>
-					<p>Please enter your details</p>
+			<div class="inner-wrap">
+				<div class="signin-form">
+					<div class="form-title">
+						<h2>Sign up</h2>
+						<p>Please enter your details</p>
+					</div>
+					<form>
+						<div class="group-half">
+							<div class="form-group">
+								<label>First Name</label>
+								<input type="text" name="name" placeholder="Enter first name">
+							</div>
+							<div class="form-group">
+								<label>Last Name</label>
+								<input type="text" name="last-name" placeholder="Enter last name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="email" name="email" placeholder="Enter your email">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<div class="input-group">
+							      <input type="password" class="form-control" name="password" autocomplete="new-password" placeholder="Enter your password">
+							      <div class="input-group-append toggle-password">
+							           <span class="input-group-text mdi mdi-eye-outline"></span>
+							      </div>
+							   </div>
+						</div>
+						<div class="form-group">
+							<label>Confirm Password</label>
+							<div class="input-group">
+							      <input type="password" class="form-control" name="password" autocomplete="new-password" placeholder="Re-enter your password">
+							      <div class="input-group-append toggle-password">
+							           <span class="input-group-text mdi mdi-eye-outline"></span>
+							      </div>
+							   </div>
+						</div>
+						<div class="form-group">
+							<input type="submit" name="submit" value="Sign up">
+							<div class="sign-up">
+								<p>Already have and account? <a href="#">Log in</a></p>
+							</div>
+						</div>
+						
+					</form>
 				</div>
-				<form>
-					<div class="group-half">
-						<div class="form-group">
-							<label>First Name</label>
-							<input type="text" name="name" placeholder="Enter first name">
-						</div>
-						<div class="form-group">
-							<label>Last Name</label>
-							<input type="text" name="last-name" placeholder="Enter last name">
-						</div>
-					</div>
-					<div class="form-group">
-						<label>Email</label>
-						<input type="email" name="email" placeholder="Enter your email">
-					</div>
-					<div class="form-group">
-						<label>Password</label>
-						<input type="password" name="password" placeholder="Enter your password">
-					</div>
-					<div class="form-group">
-						<label>Confirm Password</label>
-						<input type="password" name="password" placeholder="Re-enter your password">
-					</div>
-					<div class="form-group">
-						<input type="submit" name="submit" value="Sign up">
-						<div class="sign-up">
-							<p>Already have and account? <a href="#">Log in</a></p>
-						</div>
-					</div>
-					
-				</form>
 			</div>
 		</div>
 	</div>
 </section>
+
+<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 </body>
 </html>
